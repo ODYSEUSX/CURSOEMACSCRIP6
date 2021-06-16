@@ -1,67 +1,48 @@
-function newFunction(name,age,country){
-    var name =name || "oscar";
-    var age= age || 32;
-    var country =country || "MX";
-    console.log(name, age, country)
-}
-
-// es6
-function newFunction2(name ="oscar", age= 32, country= "MX"){
-    console.log(name,age,country);
-};
-newFunction2();
-newFunction2("Ricardo","23","CO");
-
-//
-let hello = "hello";
-let world= "world";
-let epicPhrase= hello + " "+ world;
-console.log(epicPhrase);
-let epicPhrase2= `${hello} ${world}`;
-console.log(epicPhrase2);
-
-// let y const , Multilinea,spread
-let lorem= "wwlwjddlkdldñdldñddñdñdq,dkjkdk \n"+ "otra frase epica que necesitamos";
-
+let name="oscar";
+let age=32;
+//es5
+obj={name: name, age:age};
 //es6
-let lorem2=`otra frase epica que necesitamos
-ahora es otra frase epica`;
+obj2={name ,age};
 
-console.log(lorem);
-console.log(lorem2);
+console.log(obj2)
 
-let person={
-    "name": "oscar",
-    "age":32,
-    "country":"MX"
+//arrow functions
+
+const names=[
+    {name:'oscar',age='32'},
+    {name:'yesica',age='27'}
+]
+
+let listOfnames= names.map(function(item){
+    console.log(item.name);
 }
 
-console.log(person.name,person.age);
+let listOfnames2= names.map(item=> console.log(item.name))
 
-//es6
-let {name,age}=person;
-console.log(name,age);
-
-//
-let team1=["oscar","julian","ricardo"];
-let team2=["valeria","yesica","camila"];
-
-let education =["david",...team1,...team2];
-
-console.log(education);
-
-{
-    var globalvar="Global Var";
+const listoOfnames3=(name,age,country)=>{
+    ...
 }
 
-{
-    let globallet ="gLOBAL Let";
-    console.log(globallet);
+consta listOfnames4=> name {
+    ...
 }
 
-console.log(globalvar);
+const square = num=> num*num;
 
-//uso del const
+//promesas
 
-const a="b";
-a="a";
+const helloPromise=() =>{
+    return new Promise((resolve,reject)=>{
+        if (true){
+            resolve('hey');
+        }else{
+            reject('ups');
+        }
+    });
+}
+
+helloPromise()
+.then(response=>console.log(response))
+.then(()=> console.log('hola'))
+.catch(error => console.log(error));
