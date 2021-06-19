@@ -1,19 +1,29 @@
-let numbers= [1,2,3,7,8];
+// entries sacar las llaves y su value en arrays independientes  y  saber cuantos elementos hay en el objeto
 
-if(numbers.includes(7)){
-   
-
-    console.log('si se encuentra el valor 7');
-}
-else{
-    console.log('No se encuentra ese valor')
-
+const data ={
+    frontend: 'oscar',
+    backend: 'isabel',
+    design: 'ana'
 }
 
-//elevar a la potencia
+const entries= Object.entries(data);
+console.log(entries);
+console.log(entries.length);
 
-let base =4;
-let exponent=3;
-let result =base ** exponent;
+//sacar los value de cada llave y ponerlo en un array
+const data ={
+    frontend: 'oscar',
+    backend: 'isabel',
+    design: 'ana'
+}
 
-console.log(result);
+const values= Object.values(data);
+console.log(values);
+console.log(values.length)
+
+//padding
+
+const string ='hello';
+console.log(string.padStart(7,'hi'));   // añade caracteres o simbolos al inicio de un string ,(donde 7 es el numero total de caracteres que tendra)
+console.log(string.padEnd(12,'-------')) ;  //añade caracteres o simbolos al final de un string ,(donde 12 es el numero total de caracteres que tendra)
+console.log('food'.padEnd(12,' -------'));
