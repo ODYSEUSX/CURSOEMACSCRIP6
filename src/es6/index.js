@@ -1,31 +1,19 @@
-class calculator{
-    constructor(){
-        this.valueA= 0;
-        this.valueB=0;
-    }
-    sum(valueA,valueB){
-        this.valueA=valueA;
-        this.valueB=valueB;
-        return this.valueA + this.valueB;
-    }
+let numbers= [1,2,3,7,8];
+
+if(numbers.includes(7)){
+   
+
+    console.log('si se encuentra el valor 7');
+}
+else{
+    console.log('No se encuentra ese valor')
+
 }
 
-const calc = new calculator();
-console.log(calc.sum(2,2));
+//elevar a la potencia
 
-import {hello} from './module';
-hello();
+let base =4;
+let exponent=3;
+let result =base ** exponent;
 
-function* helloWorld(){
-    if (true){
-        yield 'hello, ';
-    }
-    if (true) {
-        yield 'World';
-    }
-};
-const generatorHello= helloWorld();
-
-console.log(generatorHello.next().value);
-console.log(generatorHello.next().value);
-console.log(generatorHello.next().value);
+console.log(result);
